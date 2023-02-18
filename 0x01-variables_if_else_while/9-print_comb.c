@@ -1,20 +1,27 @@
-#include<stdio.h>
-
+#include <stdio.h>
 /**
- * main - main function
+ * main - is entry of program
  *
- * Return: always 0
+ * Return: 0, if succesful
  */
-
 int main(void)
 {
-	int i;
+	/*
+	 * prints all single integers, with comma and space after
+	 * loops through 0-9, prints them,prints comma,print space,
+	 * use only putchar
+	 */
+	int x;
 
-	for (i = 0 ; i < 10 ; i++)
+	for (x = 0 ; x < 10 ; x++)
 	{
-		putchar(i  + '0');
+		putchar((x % 10) + '0');
+		if (x == 9)
+		/*continue printing comma and space except if x == 9*/
+			continue;
 		putchar(',');
 		putchar(' ');
 	}
-	return (0); 
+	putchar('\n');
+	return (0);
 }

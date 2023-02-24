@@ -29,9 +29,7 @@ int main(void)
 
 	return (0);
 }
-
-/**
- * or
+/* or
  * int main(void)
  * {
  * 	long int x = 612852475143;

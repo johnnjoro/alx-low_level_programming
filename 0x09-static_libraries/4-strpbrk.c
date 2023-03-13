@@ -1,24 +1,30 @@
 #include "main.h"
+#include <stdio.h>
 
 /**
- * _isalpha - Entry point
- * Description: Checks if character is an alphabet
- * @c : The integer value it receives
- * Return: 1 if true. 0 if false.
+ * _strpbrk - Searches a string for any of a set of bytes.
+ * @s: string to searched
+ * @accept: set of bytes to search for
+ *
+ * Return: If a set is matched - a pointer to the matched byte.
+ *         If no set is matched - NULL.
  */
 
-int _isalpha(int c)
+char *_strpbrk(char *s, char *accept)
 {
-	if (c >= 'a' && c <= 'z')
+	int i, n;
+
+	for (i = 0; s[i] != '\0'; i++)
 	{
-		return (1);
+		for (n = 0; accept[n] != '\0'; n++)
+		{
+			if (s[i] == accept[n])
+			{
+				return (s + i);
+
+			}
+		}
 	}
-	else if (c >= 'A' && c <= 'z')
-	{
-		return (1);
-	}
-	else
-	{
-		return (0);
-	}
+
+	return (NULL);
 }

@@ -1,4 +1,4 @@
-#ifndef FUNCTION_LKE_MACRO_H
+#ifndef FUNCTION_LIKE_MACRO_H
 #define FUNCTION_LIKE_MACRO_H
 
 /*
@@ -8,6 +8,6 @@
  *	 Header file guarded to avoid the problem of double inclusion.
  */
 
-#define ABS(x) ((x) < 0 ? (-(x)) : x)
+#define ABS(x) ((x) < 0 ? (-(x)) : (x))
 
 #endif
